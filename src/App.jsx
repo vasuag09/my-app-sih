@@ -15,6 +15,7 @@ import AlumniMapPage from './components/AlumniMapPage'
 import ChatRoom from './pages/ChatRoom'
 import ConnectionsPage from './pages/ConnectionsPage'
 import EventCalendarPage from './components/EventCalendarPage'
+import AdminPage from './pages/AdminPage'
 function App() {
   const router = createBrowserRouter([
     {
@@ -37,7 +38,12 @@ function App() {
         {path: "connections", element: <ConnectionsPage />},
         {path: "events-calender", element: <EventCalendarPage />}
       ]
+    },
+    {
+      path: "admin",
+      element: <AdminPage />
     }
+
   ])
 
   return (
