@@ -1,0 +1,71 @@
+/* AppHeader.css */
+.app-header{
+  height:64px;
+  background: #fff;
+  border-bottom: 1px solid #eef2f7;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  box-shadow: 0 1px 0 rgba(16,24,40,0.02);
+  z-index:20;
+}
+
+.app-header-left{ display:flex; align-items:center; gap:12px; }
+.app-toggle{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  border-radius:8px;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  font-size:18px;
+}
+.app-title{ font-weight:700; font-size:1.05rem; color:#0b1220 }
+
+.app-header-right{ display:flex; align-items:center; gap:12px; }
+
+.app-notifs{ padding:6px 8px; border-radius:8px; cursor:pointer }
+
+.profile-wrap{ position:relative; }
+.profile-btn{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:6px 8px;
+  border-radius:10px;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  font-weight:700;
+}
+.profile-avatar{ width:34px; height:34px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#0b69ff; color:white; }
+.profile-name{ font-size:0.95rem; color:#111827 }
+
+.profile-menu{
+  position:absolute;
+  right:0;
+  top:48px;
+  background:white;
+  border:1px solid #e6eef8;
+  border-radius:8px;
+  min-width:160px;
+  box-shadow: 0 8px 30px rgba(8,12,20,0.06);
+  padding:8px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  z-index:40;
+}
+.profile-item{
+  background:transparent;
+  border:0;
+  padding:8px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  text-align:left;
+}
+.profile-item:hover{ background:#f3f6fb }

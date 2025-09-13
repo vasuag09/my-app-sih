@@ -1,0 +1,20 @@
+/* DashboardPage.css */
+.dash-grid{ display:flex; flex-direction:column; gap:18px; }
+
+.dash-welcome h2{ margin:0 0 6px 0; color:#0b1220; }
+.dash-welcome p{ margin:0; color:#566475 }
+
+.dash-cards{ display:flex; gap:12px; flex-wrap:wrap; }
+.card{
+  flex:1 1 220px;
+  background:white;
+  padding:14px;
+  border-radius:10px;
+  box-shadow: 0 8px 26px rgba(11,17,25,0.04);
+  min-height:80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  font-weight:600;
+}
+.dash-activity{ background:white; padding:14px; border-radius:10px; box-shadow: 0 8px 26px rgba(11,17,25,0.04); }

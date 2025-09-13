@@ -1,0 +1,14 @@
+/* DashboardLayout.css */
+.dashboard-layout{ display:flex; min-height:100vh; }
+
+.dashboard-main{ flex:1; display:flex; flex-direction:column; background:#f7fbff; }
+
+.dashboard-content{
+  flex:1;
+  padding:20px;
+  overflow:auto;
+  max-width:1400px;
+  margin:0 auto;
+  width:100%;
+  box-sizing:border-box;
+}

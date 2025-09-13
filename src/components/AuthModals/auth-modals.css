@@ -1,0 +1,117 @@
+/* Shared styles for auth modals (auth-modals.css) */
+.am-overlay{
+  position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+  background: rgba(6,11,21,0.45); z-index:140; padding:20px;
+}
+.am-panel{
+  width:100%; max-width:520px; background:#fff; border-radius:12px; overflow:hidden;
+  box-shadow: 0 30px 80px rgba(6,11,21,0.36); border:1px solid rgba(11,17,25,0.04);
+  display:flex; flex-direction:column;
+}
+.am-header{ display:flex; align-items:center; justify-content:space-between; padding:14px 18px; border-bottom:1px solid rgba(11,17,25,0.04); }
+.am-title{ margin:0; font-size:1.05rem; color:#0b1220; font-weight:800; }
+.am-close{ background:transparent; border:0; font-size:20px; cursor:pointer; color:#64748b; padding:6px; }
+
+.am-body{ padding:18px; display:flex; flex-direction:column; gap:12px; }
+.am-field{ display:flex; flex-direction:column; gap:6px; }
+.am-label{ font-size:0.86rem; color:#64748b; font-weight:600; }
+.am-field input{ padding:10px 12px; border-radius:10px; border:1px solid rgba(11,17,25,0.06); outline:none; font-size:0.98rem; }
+.am-field input:focus{ box-shadow: 0 6px 18px rgba(11,105,255,0.08); border-color: rgba(11,105,255,0.18); }
+
+.am-actions{ display:flex; gap:12px; align-items:center; margin-top:6px; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer; border:0; }
+.btn.primary{ background: linear-gradient(90deg,#0b69ff,#ff9c2a); color:white; box-shadow: 0 8px 28px rgba(11,105,255,0.12); }
+.btn.ghost{ background:transparent; color:#0b1220; border:1px solid rgba(11,17,25,0.06); }
+
+.am-error{ color:#b91c1c; background:#fff1f2; padding:8px 10px; border-radius:8px; font-weight:600; }
+.am-success{ color:#065f46; background:#ecfdf5; padding:8px 10px; border-radius:8px; font-weight:600; }
+
+.am-footer-links{ display:flex; justify-content:flex-end; padding-top:6px; }
+.am-link{ background:transparent; border:0; color:#0b69ff; cursor:pointer; font-weight:700; padding:6px; }
+
+@media (max-width:560px){
+  .am-panel{ max-width:100%; border-radius:10px; }
+  .am-header{ padding:12px; }
+  .am-body{ padding:14px; }
+  .am-close{ font-size:18px; }
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.skill-tag {
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.skill-tag button {
+  border: none;
+  background: transparent;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+.am-panel-horizontal {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  max-width: 95%;
+  height: 600px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(6, 11, 21, 0.36);
+}
+
+.am-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  overflow-y: auto;
+}
+
+.am-right {
+  flex: 1;
+  background: linear-gradient(135deg, #0b69ff, #ff9c2a);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  text-align: center;
+}
+
+.am-right img {
+  width: 120px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+}
+
+.am-right h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .am-panel-horizontal {
+    flex-direction: column;
+    height: auto;
+  }
+  .am-right {
+    order: -1;
+    padding: 20px;
+  }
+}
