@@ -80,11 +80,14 @@ Traditional platforms (emails, social media groups) are scattered, lack personal
 ```bash
 git clone https://github.com/your-username/alumconnect.git
 cd alumconnect
-2. Install Dependencies
+```
+### 2. Install Dependencies
+```bash
 bash
 Copy code
 npm install
-3. Environment Variables
+```
+### 3. Environment Variables
 Create a .env file in the root directory (never push this to GitHub).
 
 env
@@ -94,13 +97,13 @@ REACT_APP_SUPABASE_ANON_KEY=your-supabase-anon-key
 REACT_APP_GOOGLE_MAPS_KEY=your-maps-api-key
 For reference, see .env.example.
 
-4. Run Locally
+### 4. Run Locally
 bash
 Copy code
 npm start
 The app will run on: http://localhost:3000
 
-📂 Project Structure
+### 📂 Project Structure
 csharp
 Copy code
 AlumConnect/
@@ -114,14 +117,8 @@ AlumConnect/
 │   └── index.js
 │── .env.example
 │── README.md
-🖼️ Screenshots
-Dashboard
 
-Event Calendar
-
-Connections
-
-🏆 Why This Project Can Win SIH
+### 🏆 Why This Project Can Win SIH
 Scalable – Can be adopted by any university/college.
 
 Impactful – Strengthens alumni-student engagement.
@@ -130,7 +127,7 @@ Innovative – Combines networking, chat, map, and events in one ecosystem.
 
 Future Ready – Can integrate AI-driven mentorship matching and job boards.
 
-📌 Future Enhancements
+### 📌 Future Enhancements
 AI-based alumni-student matching (skills, industry, goals).
 
 Job & internship board powered by alumni.
@@ -139,16 +136,5 @@ Video conferencing integration for mentorship.
 
 Blockchain-based alumni credential verification.
 
-🤝 Contributing
-We welcome contributions!
-
-Fork the repo
-
-Create a new branch (feature/your-feature)
-
-Commit your changes
-
-Push and create a PR
-
-📜 License
+### 📜 License
 MIT License © 2025 AlumConnect Team
