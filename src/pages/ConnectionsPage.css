@@ -1,132 +1,177 @@
-.connections-page {
-  padding: 20px;
-  margin-top: -30px;
-  height: 85vh;
-  font-family: Arial, sans-serif;
-  color: #333;
+/* ConnectionsPage.css
+   Scoped to .conn-wrap so it won't collide with other app CSS.
+   Use this whole file replacement to get consistent card sizing.
+*/
+
+.conn-wrap {
+  --bg: #f7f9fc;
+  --card: #fff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --primary: #2563eb;
+  --accent-grad: linear-gradient(135deg,#60a5fa,#7c3aed);
+  --shadow: 0 8px 30px rgba(8,15,30,0.05);
+
+  background: var(--bg);
+  padding: 22px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 80px);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--text);
 }
 
-.page-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+/* header / intro */
+.conn-wrap .conn-header { display:flex; gap:12px; align-items:flex-start; margin-bottom:16px; }
+.conn-wrap .conn-header h1 { margin:0; font-size:18px; font-weight:700; }
+.conn-wrap .conn-header .muted { color:var(--muted); font-size:13px; margin-top:4px; }
 
-.section-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 20px 0 10px;
-}
-
-.cards-grid {
+/* grid layout */
+.conn-wrap .conn-main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+  align-items:start;
 }
 
-.cards-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.card {
-  background: #fff;
+/* panels */
+.conn-wrap .panel {
+  background: var(--card);
   border-radius: 12px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s ease-in-out;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15,23,42,0.03);
 }
 
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.conn-wrap .panel.small { padding:12px; }
+
+.conn-wrap .panel-title { font-size:15px; margin:0 0 10px 0; font-weight:600; }
+
+/* grid of cards */
+.conn-wrap .grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap:12px;
 }
 
-.card-info h4 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
+/* card */
+.conn-wrap .card {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  border-radius:10px;
+  min-height:84px;
+  transition: transform .14s ease, box-shadow .14s ease;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  overflow:hidden;
 }
 
-.card-info p {
-  margin: 2px 0;
-  font-size: 14px;
-  color: #666;
+/* hover */
+.conn-wrap .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(10,22,70,0.06);
 }
 
-.avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #007bff;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* left: avatar + meta */
+.conn-wrap .card .left {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  min-width:0;
 }
 
-.btn {
+/* ensure avatar is scoped (avoid global .avatar conflicts) */
+.conn-wrap .card .avatar {
+  flex: 0 0 44px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background: var(--accent-grad);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-weight:700;
+  font-size:14px;
+  box-shadow: 0 6px 16px rgba(12,18,40,0.06);
+  margin-left: 0;
+}
+
+/* meta */
+.conn-wrap .card .meta {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  min-width:0;
+}
+
+.conn-wrap .card .meta h3 {
+  margin:0;
+  font-size:13px;       /* small */
+  font-weight:700;
+  line-height:1;
+  color:var(--text);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width: 180px;
+}
+
+.conn-wrap .card .meta .sub {
+  display:flex;
+  gap:8px;
+  align-items:center;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.conn-wrap .card .meta .place {
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width: 130px;
+}
+
+/* role badge small */
+.conn-wrap .card .role {
+  padding:6px 8px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:600;
+}
+
+.conn-wrap .card .role.student { background:#e6f6ff; color:#0369a1; }
+.conn-wrap .card .role.alumni  { background:#fff7ed; color:#92400e; }
+.conn-wrap .card .role.member  { background:#eef2ff; color:#3730a3; }
+
+/* right actions */
+.conn-wrap .card .right {
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+}
+
+/* buttons */
+.conn-wrap .btn {
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.2s;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight:600;
+  cursor:pointer;
+  font-size:13px;
 }
+.conn-wrap .btn-primary { background:var(--primary); color:#fff; box-shadow: 0 8px 20px rgba(37,99,235,0.12);}
+.conn-wrap .btn-muted { background:#f3f4f6; color:#374151; }
 
-.connect-btn {
-  margin-left: auto;
-  background: #007bff;
-  color: white;
-}
+/* side panels */
+.conn-wrap .side .muted { color:var(--muted); font-size:13px; }
+.conn-wrap .request { display:flex; align-items:center; justify-content:space-between; padding:8px; border-radius:10px; background:#fff; border:1px solid rgba(15,23,42,0.03); }
+.conn-wrap .req-left { display:flex; gap:10px; align-items:center; }
+.conn-wrap .req-name { font-weight:700; font-size:13px; }
 
-.connect-btn:hover {
-  background: #0056b3;
-}
-
-.accept-btn {
-  background: #28a745;
-  color: white;
-}
-
-.accept-btn:hover {
-  background: #1e7e34;
-}
-
-.reject-btn {
-  background: #dc3545;
-  color: white;
-}
-
-.reject-btn:hover {
-  background: #a71d2a;
-}
-
-.request-card {
-  background: #fffbea;
-  border: 1px solid #ffe58f;
-}
-
-.connection-card {
-  background: #f6ffed;
-  border: 1px solid #b7eb8f;
-}
-
-.status {
-  font-size: 13px;
-  color: #2f855a;
-  margin-top: 4px;
-  display: inline-block;
-}
-
-.empty-text {
-  font-size: 14px;
-  color: #888;
-  font-style: italic;
-  margin-top: 8px;
+@media (max-width: 1000px) {
+  .conn-wrap .conn-main { grid-template-columns: 1fr; }
+  .conn-wrap .grid { grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); }
+  .conn-wrap .card .meta h3 { max-width:140px; }
+  .conn-wrap .card .meta .place { max-width:110px; }
 }

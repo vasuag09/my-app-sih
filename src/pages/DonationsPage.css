@@ -1,0 +1,333 @@
+/* DonationsPage.css - polished version with dp- prefix */
+
+/* page layout */
+.page-donations {
+  padding: 20px 20px 60px;
+  background: #f9fafb;
+  min-height: 100%;
+}
+.page-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* header */
+.page-title {
+  font-size: 28px;
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.dp-sub {
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* success message */
+.dp-success-msg {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+/* stats */
+.dp-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.dp-stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  border: 1px solid rgba(2, 6, 23, 0.05);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease;
+}
+.dp-stat-card:hover {
+  transform: translateY(-2px);
+}
+.dp-stat-icon {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+.dp-stat-value {
+  font-weight: 700;
+  font-size: 20px;
+}
+.dp-stat-label {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* tabs */
+.dp-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.dp-tabs button {
+  background: transparent;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dp-tabs button:hover {
+  background: #f1f5f9;
+}
+.dp-tabs button.active {
+  background: #0f172a;
+  color: white;
+  border-color: #0f172a;
+}
+
+/* grid */
+.dp-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* campaign cards */
+.dp-campaign-card {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(2, 6, 23, 0.05);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease;
+}
+.dp-campaign-card:hover {
+  transform: translateY(-2px);
+}
+.dp-campaign-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #eef2ff, #eef6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.dp-campaign-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.dp-badge {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  max-height: 28px;
+}
+.dp-campaign-desc {
+  color: #374151;
+  margin: 6px 0;
+  font-size: 14px;
+}
+.dp-campaign-progress-line {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #4b5563;
+}
+.dp-campaign-stats {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* progress */
+.dp-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.dp-progress {
+  flex: 1;
+  height: 12px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.dp-progress-fill {
+  height: 100%;
+  background: #0f172a;
+  border-radius: 999px;
+  transition: width 0.45s ease;
+}
+.dp-progress-percent {
+  font-size: 12px;
+  color: #374151;
+  min-width: 28px;
+  text-align: right;
+}
+
+/* actions */
+.dp-campaign-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+.btn-primary {
+  background: #0b5cff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn-primary:hover {
+  background: #0846c3;
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn-ghost:hover {
+  background: #f9fafb;
+}
+
+/* sidebar */
+.dp-quick-donate,
+.dp-recent {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid rgba(2, 6, 23, 0.05);
+  margin-bottom: 14px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.dp-quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.dp-quick-grid button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.dp-quick-grid button:hover {
+  background: #f1f5f9;
+}
+.btn-primary.wide {
+  width: 100%;
+}
+
+/* recent donations */
+.dp-recent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dp-recent li {
+  font-size: 14px;
+  color: #374151;
+}
+.dp-small {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* tiers */
+.dp-tier-grid {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.dp-tier-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(2, 6, 23, 0.05);
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease;
+}
+.dp-tier-card:hover {
+  transform: translateY(-2px);
+}
+.dp-tier-card strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #0f172a;
+}
+.dp-tier-card div {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+.dp-tier-card button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #0b5cff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.dp-tier-card button:hover {
+  background: #0846c3;
+}
+
+/* responsiveness */
+@media (max-width: 900px) {
+  .dp-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .dp-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.dp-chart-wrap {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(2,6,23,0.06);
+  margin-top: 16px;
+}
+
+.dp-chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}

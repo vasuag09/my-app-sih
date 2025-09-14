@@ -30,6 +30,7 @@ export default function SignUpModal({
     twitter: "",
     country: "", // ✅ new
     city: "",
+    role: "student",
   });
   const [skillInput, setSkillInput] = useState("");
   const firstRef = useRef(null);
@@ -233,6 +234,45 @@ export default function SignUpModal({
                     required
                   />
                 </label>
+                {/* Role */}
+                <label className="am-field">
+                  <span className="am-label">I am a</span>
+                  <div className="role-toggle">
+                    <label
+                      className={`role-option ${
+                        form.role === "student" ? "active" : ""
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="role"
+                        value="student"
+                        checked={form.role === "student"}
+                        onChange={(e) =>
+                          setForm((s) => ({ ...s, role: e.target.value }))
+                        }
+                      />
+                      Student
+                    </label>
+
+                    <label
+                      className={`role-option ${
+                        form.role === "alumni" ? "active" : ""
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="role"
+                        value="alumni"
+                        checked={form.role === "alumni"}
+                        onChange={(e) =>
+                          setForm((s) => ({ ...s, role: e.target.value }))
+                        }
+                      />
+                      Alumni
+                    </label>
+                  </div>
+                </label>
 
                 {/* Phone */}
                 <label className="am-field">
@@ -321,6 +361,20 @@ export default function SignUpModal({
                     >
                       Add
                     </button>
+                  </div>
+                  <div className="skills-list">
+                    {form.skills.map((skill) => (
+                      <span key={skill} className="skill-chip">
+                        {skill}
+                        <button
+                          type="button"
+                          className="remove-skill"
+                          onClick={() => handleRemoveSkill(skill)}
+                        >
+                          ×
+                        </button>
+                      </span>
+                    ))}
                   </div>
                 </div>
 

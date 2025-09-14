@@ -1,0 +1,100 @@
+/* src/components/AwardsPage.css */
+.awards-page {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.awards-page h1 {
+  margin-bottom: 0.2rem;
+}
+
+.awards-page .stats-cards {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.awards-page .stat-card {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 150px;
+}
+
+.awards-page .stat-card h2 {
+  margin: 0.5rem 0;
+}
+
+.awards-page .tabs {
+  margin-bottom: 1.5rem;
+}
+
+.awards-page .tabs button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.awards-page .cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.awards-page .award-card {
+  flex: 1 1 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #333;
+}
+
+.awards-page .award-card h3 {
+  margin-top: 0;
+}
+
+.awards-page .meta {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.awards-page .progress-bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.awards-page .progress {
+  height: 100%;
+  background: black;
+}
+
+.awards-page .card-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.awards-page .nominate-btn,
+.awards-page .details-btn {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.awards-page .nominate-btn {
+  background: black;
+  color: white;
+}
+
+.awards-page .details-btn {
+  background: white;
+  border: 1px solid black;
+  color: black;
+}

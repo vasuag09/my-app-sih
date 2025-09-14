@@ -3,14 +3,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./AppHeader.css";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/MainLogo/logo.png";
-export default function AppHeader({ user = { name: "User" }, onSignOut = () => {} }) {
+import { useSelector } from "react-redux";
+export default function AppHeader({
+  user = { name: "User" },
+  onSignOut = () => {},
+}) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
-    const navigate = useNavigate()
+  const navigate = useNavigate();
+  const userName = useSelector(state=>state.user.user.user_metadata.name)
   // close when clicking outside
   useEffect(() => {
     function onDoc(e) {
-      if (menuRef.current && !menuRef.current.contains(e.target)) setOpen(false);
+      if (menuRef.current && !menuRef.current.contains(e.target))
+        setOpen(false);
     }
     document.addEventListener("mousedown", onDoc);
     return () => document.removeEventListener("mousedown", onDoc);
@@ -27,7 +33,14 @@ export default function AppHeader({ user = { name: "User" }, onSignOut = () => {
       </div>
 
       <div className="app-header-right">
-        <div className="app-notifs" title="Notifications" role="button" tabIndex={0}>🔔</div>
+        <div
+          className="app-notifs"
+          title="Notifications"
+          role="button"
+          tabIndex={0}
+        >
+          🔔
+        </div>
 
         <div className="profile-wrap" ref={menuRef}>
           <button
@@ -37,7 +50,14 @@ export default function AppHeader({ user = { name: "User" }, onSignOut = () => {
             aria-haspopup="menu"
             type="button"
           >
-            <span className="profile-avatar" aria-hidden>👤</span>
+            <span className="profile-avatar" aria-hidden>
+              {" "}
+              <img
+                src={`https://ui-avatars.com/api/?name=${userName}&background=2c52e0&color=fff`}
+                alt="profile"
+                className="profile-pic"
+              />
+            </span>
             <span className="profile-name">{user.name}</span>
           </button>
 
@@ -51,10 +71,22 @@ export default function AppHeader({ user = { name: "User" }, onSignOut = () => {
                 transition={{ duration: 0.18 }}
                 role="menu"
               >
-                <button className="profile-item" onClick={() => { setOpen(false); /* navigate to profile */navigate(`profile`); }}>
+                <button
+                  className="profile-item"
+                  onClick={() => {
+                    setOpen(false);
+                    /* navigate to profile */ navigate(`profile`);
+                  }}
+                >
                   View Profile
                 </button>
-                <button className="profile-item" onClick={() => { setOpen(false); onSignOut(); }}>
+                <button
+                  className="profile-item"
+                  onClick={() => {
+                    setOpen(false);
+                    onSignOut();
+                  }}
+                >
                   Sign Out
                 </button>
               </motion.div>

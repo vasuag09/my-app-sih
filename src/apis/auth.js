@@ -18,6 +18,7 @@ export async function signUp(form) {
           twitter: form.twitter,
           country: form.country, // ✅ new field
           city: form.city,
+          role: form.role,
         },
       },
     });
@@ -43,6 +44,7 @@ export async function signUp(form) {
       email: form.email,
       country: form.country,
       city: form.city,
+      role: form.role,
     });
     if (profileError) throw profileError;
     // ✅ Save user into Redux

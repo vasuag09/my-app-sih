@@ -1,0 +1,53 @@
+/* src/components/JobCard.css
+   Job card specific styling
+*/
+
+.job-card {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:16px;
+  border-radius:12px;
+  align-items:center;
+  border: 1px solid rgba(15,23,42,0.04);
+  background: linear-gradient(180deg,#fff,#fbfdff);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.job-left { display:flex; gap:12px; align-items:center; min-width:0; }
+
+.logo-placeholder {
+  width:56px;
+  height:56px;
+  border-radius:12px;
+  background: linear-gradient(135deg,#eef6ff,#f0f9ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#0b3a66;
+  font-size:20px;
+  box-shadow: 0 8px 20px rgba(12,20,50,0.04);
+}
+
+.job-meta { min-width:0; }
+.job-title { margin:0; font-size:16px; font-weight:700; }
+.job-sub { display:flex; gap:8px; align-items:center; color:#6b7280; font-size:13px; margin-top:6px; }
+
+.tag {
+  background:#eef2ff;
+  color:#3730a3;
+  padding:4px 8px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:12px;
+}
+
+/* action column inside card */
+.job-actions { display:flex; gap:8px; align-items:center; }
+
+/* small screen adjustments */
+@media (max-width: 680px) {
+  .logo-placeholder { width:48px; height:48px; font-size:16px; }
+  .job-title { font-size:15px; }
+}

@@ -1,0 +1,101 @@
+.career-page {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.career-page h1 {
+  margin-bottom: 0.2rem;
+}
+
+.career-page .stats-cards {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.career-page .stat-card {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+}
+
+.career-page .stat-card h2 {
+  margin: 0.5rem 0;
+}
+
+.career-page .tabs {
+  margin-bottom: 1.5rem;
+}
+
+.career-page .tabs button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.career-page .main-grid {
+  display: flex;
+  gap: 2rem;
+}
+
+.career-page .timeline {
+  flex: 2;
+}
+
+.career-page .timeline ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.career-page .timeline li {
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #ddd;
+  padding-left: 1rem;
+}
+
+.career-page .timeline .date {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.career-page .side-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.career-page .progress-box,
+.career-page .skills-box {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.career-page .progress-bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.3rem 0;
+}
+
+.career-page .progress {
+  height: 100%;
+  background: black;
+}
+
+.career-page .percent {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+
+.career-page .skill {
+  margin-bottom: 1rem;
+}

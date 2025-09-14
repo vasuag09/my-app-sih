@@ -42,7 +42,7 @@
   cursor:pointer;
   font-weight:700;
 }
-.profile-avatar{ width:34px; height:34px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#0b69ff; color:white; }
+.profile-avatar img{ width:34px; height:34px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#0b69ff; color:white; }
 .profile-name{ font-size:0.95rem; color:#111827 }
 
 .profile-menu{

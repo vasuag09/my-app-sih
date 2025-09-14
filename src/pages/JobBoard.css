@@ -1,0 +1,70 @@
+/* src/pages/JobBoard.css
+   Page-level styles: JobBoard header, layout, filters, global variables
+*/
+
+:root{
+  --bg: #f6f9fc;
+  --panel: #fff;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --radius: 12px;
+  --shadow: 0 12px 36px rgba(12,20,50,0.06);
+  --card-border: rgba(15,23,42,0.04);
+  --ui-font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.jobs-page {
+  padding: 28px;
+  font-family: var(--ui-font);
+  background: var(--bg);
+  min-height: calc(100vh - 72px);
+  color: #0f172a;
+}
+
+/* Header */
+.jobs-header {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 18px;
+}
+.jobs-header h1 { margin:0; font-size:22px; font-weight:700; }
+.jobs-header .muted { color:var(--muted); margin-top:4px; font-size:13px; }
+
+/* actions */
+.actions { display:flex; gap:12px; align-items:center; }
+.search {
+  background: #fff;
+  border:1px solid rgba(15,23,42,0.06);
+  padding:10px 12px;
+  border-radius:10px;
+  min-width:240px;
+  box-shadow: 0 6px 18px rgba(8,15,30,0.02);
+}
+.btn { border: none; padding: 8px 12px; border-radius:10px; font-weight:600; cursor:pointer; }
+.btn.primary { background:var(--primary); color:#fff; box-shadow: 0 8px 20px rgba(37,99,235,0.12); }
+.btn.ghost { background:transparent; border: 1px solid rgba(15,23,42,0.06); color:#111; }
+.btn.disabled { opacity:0.6; pointer-events:none; }
+
+/* layout */
+.jobs-grid { display:grid; grid-template-columns: 340px 1fr; gap:18px; align-items:start; }
+
+/* filter panel */
+.panel { background:var(--panel); border-radius:var(--radius); padding:16px; box-shadow: 0 6px 18px rgba(8,15,30,0.04); }
+.jobs-filters .filter-group { margin-bottom:12px; }
+.jobs-filters label { display:block; font-weight:600; margin-bottom:6px; }
+.jobs-filters select, .jobs-filters input { width:100%; padding:8px 10px; border-radius:8px; border:1px solid rgba(15,23,42,0.06); }
+
+/* job list wrapper */
+.jobs-list { display:flex; flex-direction:column; gap:12px; }
+.job-results { display:flex; flex-direction:column; gap:12px; }
+
+/* helpers */
+.muted { color:var(--muted); }
+.dot { margin: 0 6px; color:var(--muted); }
+
+/* responsive */
+@media (max-width: 980px) {
+  .jobs-grid { grid-template-columns: 1fr; }
+  .search { min-width: 120px; }
+}

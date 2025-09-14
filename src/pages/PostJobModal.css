@@ -1,0 +1,64 @@
+/* src/components/PostJobModal.css
+   Styles for the Post Job modal
+*/
+
+.modal-overlay { /* same visual as details modal */
+  position:fixed;
+  inset:0;
+  background: rgba(9,10,10,0.36);
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  z-index:1000;
+  padding: 48px 20px;
+}
+
+.modal-card {
+  width: 720px;
+  max-width: calc(100% - 48px);
+  background: #fff;
+  border-radius: 12px;
+  overflow:auto;
+  box-shadow: 0 12px 36px rgba(12,20,50,0.06);
+}
+
+.modal-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 20px;
+  border-bottom:1px solid rgba(15,23,42,0.04);
+}
+
+.modal-body {
+  padding:20px;
+  max-height:70vh;
+  overflow:auto;
+}
+
+/* form fields */
+.modal-body label { display:block; margin-top:10px; font-weight:600; color:#111827; }
+.modal-body input[type="text"],
+.modal-body input[type="email"],
+.modal-body select,
+.modal-body textarea {
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.06);
+  margin-top:6px;
+  box-sizing:border-box;
+}
+.modal-body textarea { min-height:100px; resize:vertical; }
+
+.modal-body .actions {
+  margin-top:12px;
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+}
+
+/* responsive */
+@media (max-width:720px) {
+  .modal-card { width:98%; }
+}

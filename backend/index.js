@@ -6,6 +6,7 @@ import { Server } from "socket.io";
 import { createClient } from "@supabase/supabase-js";
 import dotenv from "dotenv";
 import connectionRoutes from "./routes/connections.js";
+import jobRoutes from "./routes/jobs.js"
 dotenv.config();
 
 
@@ -126,6 +127,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/groups", groupRoutes);
 app.use("/api/connections", connectionRoutes);
+app.use("/api/jobs", jobRoutes);
 
 // New endpoint: fetch last 50 messages
 app.get("/api/messages", async (req, res) => {

@@ -1,0 +1,332 @@
+/* Container */
+.mentorship-container {
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(90deg, #eef6ff, #fff7ef); /* Soft blue–orange gradient */
+  min-height: 100vh;
+}
+
+/* Header */
+.mentorship-header {
+  text-align: left;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.mentorship-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.mentorship-header p {
+  color: #6b7280;
+  font-size: 1.05rem;
+  margin: 0.3rem 0 1rem;
+}
+
+.join-btn {
+  background: linear-gradient(120deg, #1e90ff, #ff8c00); /* Blue to orange */
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Stats Section */
+.mentorship-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.stat-card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.stat-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.4rem 0;
+}
+.stat-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+.stat-icon {
+  font-size: 1.5rem;
+}
+.stat-icon.red { color: #ef4444; }
+.stat-icon.blue { color: #1e90ff; }
+.stat-icon.gold { color: #ff8c00; }
+.stat-icon.green { color: #10b981; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.tabs button {
+  background: #f3f4f6;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.tabs button.active {
+  background: linear-gradient(120deg, #1e90ff, #ff8c00);
+  color: white;
+}
+.tabs button:hover {
+  background: rgba(30, 144, 255, 0.1);
+}
+
+/* Mentor/Mentee Cards Grid */
+.mentorship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card */
+.mentorship-card {
+  background: #fff;
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mentorship-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Card Header */
+.mentor-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.avatar {
+  font-size: 32px;
+}
+.mentor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mentor-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.mentor-role,
+.mentor-company {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+.rating {
+  font-size: 0.85rem;
+  color: #ff8c00;
+  font-weight: 500;
+}
+
+/* Bio */
+.mentorship-card p {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.8rem;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+.tag {
+  background: #f3f4f6;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+/* Availability */
+.availability {
+  font-size: 0.85rem;
+  color: #10b981;
+  margin-bottom: 0.8rem;
+}
+
+/* Footer */
+.mentor-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Primary Buttons */
+.primary-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(120deg, #1e90ff, #ff8c00);
+  color: white;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.primary-btn:hover {
+  background: linear-gradient(120deg, #1874d1, #e67a00);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  width: 500px;
+  max-width: 95%;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.2s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+.modal-close:hover {
+  color: #111827;
+}
+
+/* Modal Headings */
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+}
+.modal-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Role Options */
+.role-options {
+  display: flex;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+.role-card {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.role-card:hover {
+  border-color: #1e90ff;
+}
+.role-card.active {
+  border: 2px solid #ff8c00;
+  background: linear-gradient(120deg, #eef6ff, #fff7ef);
+}
+.role-card h4 {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.role-card p {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+.role-icon {
+  font-size: 1.6rem;
+  color: #1e90ff;
+}
+
+/* Form Inputs */
+textarea, select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  resize: none;
+}
+textarea:focus, select:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+/* Modal Actions Buttons */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.cancel-btn {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+.cancel-btn:hover {
+  background: #e5e7eb;
+}

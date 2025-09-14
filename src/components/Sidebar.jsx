@@ -13,7 +13,12 @@ export default function Sidebar() {
     { to: `/${user?.id}/app/forum`, label: "Forum", icon: "💬" },
     { to: `/${user?.id}/app/connections`, label: "Connections", icon: "🧑‍🦯‍➡️" },
     { to: `/${user?.id}/app/events`, label: "Events", icon: "🗓️" },
-    { to: `/${user?.id}/app/events-calender`, label: "Events Calender", icon: "📅" },
+    { to: `/${user?.id}/app/jobs`, label: "Job Board", icon: "🧑‍💻" },
+    { to: `/${user?.id}/app/donations`, label: "Donations", icon: "💵" },
+    { to: `/${user?.id}/app/mentorship`, label: "Mentorship", icon: "📖" },
+    { to: `/${user?.id}/app/career-pathway`, label: "Career Pathway", icon: "📒" },
+    { to: `/${user?.id}/app/awards`, label: "Awards", icon: "🏆" },
+    // { to: `/${user?.id}/app/events-calender`, label: "Events Calender", icon: "📅" },
     { to: `/${user?.id}/app/chatroom`, label: "ChatRoom", icon: "📋" },
     { to: `/${user?.id}/app/alumni-map`, label: "Alumni Map", icon: "🗺️" },
     { to: `/${user?.id}/app/profile`, label: "User Profile", icon: "👤" },
@@ -30,7 +35,7 @@ export default function Sidebar() {
       <div className="sidebar-top">
         <div className="sidebar-brand">
           {" "}
-          <img src={logo} alt="" style={{ width: "30px" }} />
+          <img src={logo} alt="" style={{ width: "120px" }} />
         </div>
       </div>
 

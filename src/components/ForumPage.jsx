@@ -114,6 +114,7 @@ export default function ForumPage() {
               type="text"
               className="author-input"
               name="title"
+              placeholder="Post Title"
             />
 
             <input

@@ -1,0 +1,129 @@
+/* Grid Layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card Styles */
+.stat-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Content Centering */
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Icon Wrappers */
+.stat-icon {
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.bg-blue {
+  background-color: #eff6ff;
+}
+.bg-green {
+  background-color: #ecfdf5;
+}
+.bg-purple {
+  background-color: #f5f3ff;
+}
+
+/* Icon Colors */
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+.icon-blue {
+  color: #3b82f6;
+}
+.icon-green {
+  color: #10b981;
+}
+.icon-purple {
+  color: #8b5cf6;
+}
+
+/* Numbers + Labels */
+.stat-number {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+/* Loading State */
+.stat-card.loading {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #f3f4f6;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: pulse 2s infinite;
+}
+
+.loading-circle {
+  width: 4rem;
+  height: 4rem;
+  background: #e5e7eb;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.loading-box {
+  background: #e5e7eb;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.loading-box.small {
+  width: 2rem;
+  height: 2rem;
+}
+
+.loading-box.medium {
+  width: 6rem;
+  height: 1rem;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
